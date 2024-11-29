@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FOR YOU ANIS</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script>
+    function validateForm(event) {
+      event.preventDefault(); // Prevent the form from submitting
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const validUsername = "thycwr";
+      const validPassword = "anis";
+
+      if (username === validUsername && password === validPassword) {
+        // Redirect to homepage.html
+        window.location.href = 'homepage.html';
+      } else {
+        alert('Salah username atau password tu awak hshshs');
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="wrapper">
+    <form onsubmit="validateForm(event)">
+      <h1>Login</h1>
+      <div class="input-box">
+        <input type="text" id="username" placeholder="Username" required>
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" id="password" placeholder="Password" required>
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+      <button type="submit" class="btn">Login</button>
+    </form>
+  </div>
+</body>
+</html>
